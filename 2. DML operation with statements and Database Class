@@ -1,0 +1,11 @@
+List<Account> acctListone = new List<Account>();
+acctListone.add(new Account(name='sim5'));
+acctListone.add(new Account(name='sim6'));
+//DML statement
+insert acctListone;
+
+List<Account> acctListtwo = new List<Account>();
+acctListtwo.add(new Account(name='sim3'));
+acctListtwo.add(new Account(name='sim4'));
+//Using Database Class
+Database.SaveResult[] srlist = Database.insert(acctListtwo, false);
